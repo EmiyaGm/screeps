@@ -1,7 +1,11 @@
 Game.spawns['Spawn1'].spawnCreep([WORK, CARRY, MOVE], 'Harvester1');
+Game.spawns['Spawn1'].spawnCreep([WORK, CARRY, MOVE], 'Upgrader1');
+
 module.exports.loop = function () {
     var creep1 = Game.creeps['Harvester1'];
     work(creep1);
+    var up1 = Game.creeps['Upgrader1'];
+    upgrade(up1);
  }
  
  function upgrade(creep) {
