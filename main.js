@@ -43,7 +43,7 @@ module.exports.loop = function () {
              //这里是移动到基地
              creep.moveTo(Game.spawns['Spawn1']);
 
-             if (Game.spawns['Spawn1'].store.getFreeCapacity(RESOURCE_ENERGY) == 200) {
+             if (Game.spawns['Spawn1'].energy == 300) {
                 creep.moveTo(creep.room.controller);
              }
          }
