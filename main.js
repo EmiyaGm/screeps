@@ -42,6 +42,10 @@ module.exports.loop = function () {
          if( creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE ) {
              //这里是移动到基地
              creep.moveTo(Game.spawns['Spawn1']);
+
+             if (Game.spawns['Spawn1'].store.getFreeCapacity(RESOURCE_ENERGY) == 200) {
+                creep.moveTo(creep.room.controller);
+             }
          }
      }
  }
